@@ -20,7 +20,7 @@ jobs:
 
       - name: Debug
         run: |
-          echo "github.ref -> {{ github.ref }}"
+          echo "github.ref -> {{ github.ref }}" >> ${{ github.ref }}
  
       - name: Docker metadata
         id: metadata

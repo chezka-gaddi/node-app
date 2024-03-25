@@ -13,5 +13,11 @@ app.get('/', function(req, res) {
   });
 });
 
+// End point Starts here
+app.get('/data', (req, res) => {
+  const data = decodeURIComponent(req.params.name);
+  return res.status(200).json(data)
+})
+
 app.listen(8080);
 module.exports.getApp = app;

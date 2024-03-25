@@ -6,6 +6,5 @@ jobs:
   job_name:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Event Payload
-        uses: actions/checkout@v4
-        run: 'echo "Event payload: ${{ toJson(github.event.client_payload) }}"'
+        - uses: actions/checkout@v4
+        - run: 'echo "Event payload: ${{ toJson(github.event.client_payload) }}"'

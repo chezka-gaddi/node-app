@@ -1,0 +1,10 @@
+name: Run Tests
+on:
+  repository_dispatch:
+    types: [EVENT_NAME]
+jobs:
+  job_name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Event Payload
+        run: echo "Event payload: ${{ toJson(github.event.client_payload) }}"

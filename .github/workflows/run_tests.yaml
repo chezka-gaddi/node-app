@@ -1,7 +1,7 @@
 name: Run Tests
 on:
   repository_dispatch:
-    types: [EVENT_NAME]
+    types: run_test
 jobs:
   job_name:
     runs-on: ubuntu-latest

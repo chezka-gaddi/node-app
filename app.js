@@ -14,8 +14,8 @@ app.get('/', function(req, res) {
 });
 
 // End point Starts here
-app.get('/data', (req, res) => {
-  const data = decodeURIComponent(req.params.name);
+app.post('/data', (req, res) => {
+  const data = decodeURIComponent(req.params);
   return res.status(200).json(data)
 })
 

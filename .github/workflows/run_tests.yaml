@@ -4,6 +4,7 @@ on:
     types: run_test
 jobs:
   job_name:
+    name: Test
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v4
